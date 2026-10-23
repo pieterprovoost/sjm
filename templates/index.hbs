@@ -1,0 +1,68 @@
+{{> header }}
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v3.1';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<container>
+
+	<div class="row" id="categories">
+		{{#each categories}}
+			<div class="col-lg-2 col-md-3">
+				<a href="/categorie/{{@key}}" class="category">
+					<span>{{@key}}</span>
+				</a>
+			</div>
+		{{/each}}
+	</div>
+
+	<div class="row fullscreen-hide">
+		<div class="col-md-8">
+            <div class="section mb-4">
+                <h3>SmogJeMee app?</h3>
+                <p>Vinden jullie het ook vervelend om altijd naar onze website te moeten surfen als je een SMOG-gebaar wil opzoeken? Dan hebben we goed nieuws: er is nu een web app van onze website die je op je smartphone kan zetten.</p>
+                <p>Hoe installeer je een web app?</p>
+                <ul>
+                    <li>Android: als je op je smartphone naar onze website (www.smogjemee.be) gaat, krijg je een pop-up en kan je de app installeren door te klikken op "voeg toe aan je startscherm" (zie demo <a href="https://youtu.be/OB82f07lmWI" target="_blank">https://youtu.be/OB82f07lmWI</a>). Zie je geen pop-up, ga dan naar het browsermenu en zoek deze optie (zie demo: <a href="https://youtu.be/D4r3q8PSS1w" target="_blank">https://youtu.be/D4r3q8PSS1w</a>).</li>
+                    <li>iPhone: ga naar onze website (www.smogjemee.be), klik op het symbool om de website te delen en kies "zet op beginscherm" (zie demo: <a href="https://www.youtube.com/watch?v=kzq7-lDs-XY" target="_blank">https://www.youtube.com/watch?v=kzq7-lDs-XY</a>).</li>
+                </ul>  
+                <p>Als dit gelukt is zal de smogjemee app op je startscherm staan. Veel plezier!</p>
+            </div>
+            <div class="section mb-4">
+                <h3>Welkom</h3>
+                <img src="/public/ernest.jpg" class="img-100 mb-2" />
+                <p>Hallo! Ik ben Ernest. Ik werd in 2013 geboren met het Syndroom van Down. Toen ik bijna 3 jaar was, merkten mijn mama en papa dat ik heel snel boos werd en vaak gefrustreerd was. Gelukkig begrepen ze dat dit kwam omdat ik vanalles duidelijk wilde maken, maar dit niet kon, en dus gingen ze op onderzoek uit. Ze zochten naar mensen die mij konden helpen om allerlei dingen te leren die ik niet zomaar uit mezelf zou kunnen, en die mij misschien ook zouden kunnen helpen als ik naar de eerste kleuterklas zou gaan.</p>
+                <p>En zo stond er op een ochtend een mevrouw aan de deur die met mij kwam spelen. Ze leerde me dat ik mijn handen kan gebruiken om duidelijk te maken wat ik wil, en ik merkte al snel dat mijn mama en papa, mijn zus en andere mensen rond mij mij ook echt begrepen als ik de juiste gebaren maakte. Wat was ik blij! Telkens als ik merkte dat ik iets duidelijk had kunnen maken, toonde ik hen mijn allermooiste lach, en vaak gaf ik ook nog applaus van pure blijdschap. En nog beter: zij gebruikten diezelfde gebaren ook, en dus begreep ik hen ook beter dan voordien.</p>
+                <p>Omdat ze er graag voor wilden zorgen dat veel meer mensen de gebaren die ik gebruik zouden kennen, kregen mijn mama en papa het idee om een website op te starten. Hier toont mijn grote zus, Lilith, jullie filmpjes voor veel SMOG-gebaren.</p>
+                <img src="/public/lilith.jpg" class="img-100 mb-2" />
+                <p>Hallo! Ik ben Lilith. Ik ben 13 jaar en ik ben de zus van Ernest. Mijn broer heeft Downsyndroom en kan dus moeilijk praten. Vroeger vond ik het heel stom omdat ik eigenlijk niet goed met mijn kleine broertje kon communiceren. Totdat er een logopediste voor onze deur stond, had ik nog nooit van smog gehoord. En plotseling begon mijn broertje met zijn kleine handjes te praten! Ik vond het zo tof, dat ik het zelf ook snel oppikte. Eindelijk kon ik mijn broertje begrijpen! En hij verstond mij ook!</p>
+                <p>Ik en mijn gezin konden al snel met gebaren spreken, maar mensen zoals mijn grootouders, Ernests leerkrachten… konden maar een paar gebaren en konden hem dus niet zo goed verstaan. Dus mijn ouders vroegen zich af hoe we op een snelle en handige manier de gebaren aan anderen konden leren. Toen mijn vader vroeg of ik het zag zitten om de smog-gebaren voor te doen in filmpjes, twijfelde ik niet. Tuurlijk! Ernests logopediste werkte ook mee, en zo zaten we uren samen om gebaren aan te leren en te filmen.</p>
+                <p>Eindelijk, op 25 mei 2018, Ernests vijfde verjaardag, konden we de website samen met een grappig filmpje van ons twee de wereld in sturen. Onze website werd keiveel bekeken en onze facebookpagina had direct al snel duizenden volgers, iedereen leek ons idee top te vinden. Na een week stond ik in de krant, op het nieuws en was ik te horen op de radio! Ik vond het allemaal heel spannend. Ik hoop dat jullie iets hebben aan onze filmpjes. Veel plezier!</p>
+            </div>
+            <div class="section mb-4">
+                <h3>Over ons</h3>
+                <p>Wij zijn een gezin van vier. In mei 2013 kwam onze zoon Ernest met een klein extra'tje op de wereld: hij werd geboren met het Syndroom van Down. Praten is voor kinderen met Down niet makkelijk, en dus kozen we resoluut voor communicatie via SMOG: Spreken Met Ondersteuning van Gebaren. We volgden een initiatiecursus en Ernest leerde SMOG van zijn logopediste. Na een tijdje merkten we dat hij zo snel en zo veel gebaren leerde, dat we zelf niet meer in staat waren te volgen. Bovendien komt hij via school en opvang in contact met heel wat mensen die ook met hem moeten kunnen communiceren.</p>
+                <p>Omdat we vinden dat iedereen rond Ernest de kans moet krijgen om via SMOG met hem te communiceren, en omdat we ervan uitgaan dat dit ook geldt voor heel wat andere kinderen en hun entourage, ontwikkelden we deze website. Lilith, Ernests grote zus, toont in elk filmpje een nieuw gebaar.</p>
+                <p><img src="/public/ernest-lilith.jpg" class="img-100 mb-2" /></p>
+                <p>We staan in dit avontuur niet alleen. Alle gebaren worden aan Lilith aangeleerd door Lieselot Ghekiere, logopediste met een SMOG-attest, en nog eens extra gecontroleerd door het hele logopedistenteam van De Vleugels alvorens ze online komen. We zijn blij met de steun die we vanuit De Vleugels krijgen.</p>
+                <p>Verder konden we ook rekenen op de hulp van Pieter Provoost, die mee zijn schouders zette onder de technische kant van deze website, en Joke Derycke zorgde voor het logo van deze website.</p>
+            </div>
+            <div class="section mb-4">
+                <h3>Over SMOG</h3>
+                <p>SMOG, Spreken Met Ondersteuning van Gebaren, is een communicatiestijl die in de jaren 70-80 door Martine Nijs, Louis Smet en Filip Loncke werd ontwikkeld om kinderen, jongeren en volwassenen met moeilijkheden op vlak van taalbegrip en/of -expressie te helpen. Het is een vorm van ondersteunende communicatie: de spraak valt niet weg, maar het is juist heel belangrijk dat bij elk gebaar het woord ook wordt uitgesproken. Alleen de betekenisdragende woorden uit een zin worden ondersteund met een gebaar. De bijkomende gezichtsexpressie geeft een gebaar meer betekenis. Bij het uitvoeren van gebaren, moet je rekening houden met de plaats, richting en beweging.</p>
+                <p>Voor meer informatie over de visie achter SMOG, ga naar <a href="http://www.s-m-o-g.be" target="_blank">www.s-m-o-g.be</a>. Wil je SMOG écht goed beheersen en de principes kennen, dan zal onze website niet voldoende voor je zijn en raden we je aan een SMOG initiatie-cursus te volgen georganiseerd door vwz <a href="http://www.gezinenhandicap.be/infoavonden/" target="_blank">Gezin en Handicap</a> of een thuisbegeleidingsdienst, Reva, school of MFC in je buurt. Voor gezinnen raden wij ook professionele ondersteuning vanuit een dienst logo aan: daardoor konden wij zelf ook volgen, en begrepen we alle gebaren die Ernest leerde.</p>
+                <p>Er zijn 500 basisgebaren, die we jullie op deze website willen aanbieden. Zoals je ziet zijn we er nog niet helemaal, maar we doen ons best om regelmatig nieuwe filmpjes online te zetten. Ondertussen... oefenen maar! Smog Je Mee? ;-)</p>
+            </div>
+		</div>
+        <div class="col-md-4">
+            <div class="fb-page" data-href="https://www.facebook.com/smogjemee/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-width="500" data-height="800" data-show-facepile="true"><blockquote cite="https://www.facebook.com/smogjemee/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/smogjemee/">Smogjemee?</a></blockquote></div>
+        </div>
+	</div>
+</container>
+
+{{> footer }}

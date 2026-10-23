@@ -1,0 +1,22 @@
+{{> header }}
+
+<container>
+
+<div class="row">
+    <div class="col-md-12">
+
+<ul class="list">
+    {{#each list}}
+        <li>
+            <a href="#" onclick="openModal('{{this.woord}}','{{this.url}}')">
+                <span>{{this.woord}}</span>
+            </a>
+        </li>
+    {{/each}}
+</ul>
+
+    </div>
+</div>
+</container>
+
+{{> footer }}

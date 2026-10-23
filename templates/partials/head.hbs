@@ -1,0 +1,31 @@
+<head>
+    <meta charset="utf-8">
+
+    <link rel="manifest" href="/public/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="SMOG je mee?">
+    <link rel="apple-touch-icon" sizes="152x152" href="/public/icon-apple-152x152.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/public/icon-apple-192x192.png">
+    <meta name="theme-color" content="#D41481" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="google-site-verification" content="N5L-wDXSeVd608tZZwEu3PgLA1-X3u6kBtkRoM1on5g" />
+    <meta name="description" content="Zoek je het SMOG-gebaar voor een bepaald woord? Hier moet je zijn!">
+    <link rel="stylesheet" href="/public/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <link href="/public/fonts.css" rel="stylesheet">
+    <link href="/public/style.css" rel="stylesheet">
+    <title>SMOG je mee? - Spreken Met Ondersteuning van Gebaren</title>
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("/service-worker.js")
+                        .then(() => {
+                            console.log("Service worker registered.");
+                        });
+            });
+        }
+    </script>
+</head>

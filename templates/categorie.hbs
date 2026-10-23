@@ -1,0 +1,17 @@
+{{> header }}
+
+<container>
+
+	<div class="row" id="categories">
+		{{#each this.cat}}
+			<div class="col-lg-2 col-md-3">
+				<a href="#" class="category movie" onclick="openModal('{{this.name}}','{{this.url}}')">
+					<span>{{this.name}}</span>
+				</a>
+			</div>
+		{{/each}}
+	</div>
+
+</container>
+
+{{> footer }}

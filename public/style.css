@@ -1,0 +1,119 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+h3 {
+    font-family: 'Gaegu', cursive;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.category {
+    display: table;
+    padding: 0px;
+    margin-top: 20px;
+    height: 80px;
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.category span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.category, .category:hover, .category:active {
+    color: #000000;
+    text-decoration: none;
+}
+
+.category:hover {
+    background-color: #eeeeee;
+}
+
+.navbar-brand img {
+  max-height: 40px;
+}
+
+#categories {
+    margin-bottom: 30px;
+}
+
+.movie {
+    padding-left: 45px;
+    padding-right: 5px;
+    background-image: url("play.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+a, a:hover, a:active {
+    color: #cc3300;
+}
+
+.img-50 {
+    max-width: 50%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.img-100 {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .img-50 {
+        max-width: 100%;
+    }
+}
+
+.pull-left {
+    float: left;
+}
+
+.footer {
+    margin-top: 30px;
+    background-color: #dbd676;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.hspacer {
+    display: inline-block;
+    width: 20px;
+}
+
+main {
+    padding-bottom: 90px;
+}
+
+.section {
+    clear: both;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+}
+
+@media all and (display-mode: fullscreen) {
+    .fullscreen-hide {
+        display: none;
+    }
+    main {
+        padding-bottom: 10px;
+    }
+}
