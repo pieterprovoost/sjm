@@ -7,9 +7,10 @@ const FILES_TO_CACHE = [
     "/public/smogjemee_fixed.png"
 ];
 
-const CACHE_NAME = "smog";
+const CACHE_NAME = "smog-2";
 
 self.addEventListener("install", function(event) {
+    self.skipWaiting();
     event.waitUntil(
         caches.open(CACHE_NAME).then((cache) => {
             return cache.addAll(FILES_TO_CACHE);
@@ -18,6 +19,9 @@ self.addEventListener("install", function(event) {
 });
 
 self.addEventListener("fetch", function(event) {
+    if (new URL(event.request.url).origin !== self.location.origin) {
+        return;
+    }
 
     event.respondWith(
         caches.match(event.request).then((r) => {
@@ -44,6 +48,8 @@ self.addEventListener("activate", function(event) {
                     return caches.delete(key);
                 }
             }));
+        }).then(function() {
+            return self.clients.claim();
         })
     );
 });

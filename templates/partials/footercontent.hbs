@@ -12,7 +12,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             </div>
             <div class="modal-body">
-                <iframe width="100%" frameborder="0" height="400px;"allowfullscreen=""></iframe>
+                <iframe width="100%" height="400" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
     </div>
@@ -34,22 +34,22 @@
         if (!url) {
             return;
         }
-        var id = url.match("v=(.*)")[1];
-        var src = "https://www.youtube.com/embed/" + id + "?autoplay=1";
+        var id = url.match(/[?&]v=([\w-]{6,})/);
+        if (!id) {
+            return;
+        }
+        var src = "https://www.youtube.com/embed/" + id[1] + "?autoplay=1&playsinline=1";
         $("#myModal").modal("show");
         $("#modaltitle").text(title);
-        var frame = $("#myModal iframe")[0];
-        frame.contentWindow.location.replace(src);
+        $("#myModal iframe").attr("src", src);
     };
 
     $("#myModal button").click(function () {
-        var frame = $("#myModal iframe")[0];
-        frame.contentWindow.location.replace("about:blank");
+        $("#myModal iframe").attr("src", "about:blank");
     });
 
     $("#myModal").on("hidden.bs.modal", function () {
-        var frame = $("#myModal iframe")[0];
-        frame.contentWindow.location.replace("about:blank");
+        $("#myModal iframe").attr("src", "about:blank");
     });
 
     $.getJSON("/search.json").done(function(data) {
